@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: #f7fafc;
+  color: #162033;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(18, 53, 91, 0.18);
+}
+
+:focus-visible {
+  outline: 3px solid rgba(18, 53, 91, 0.38);
+  outline-offset: 3px;
+}
