@@ -41,15 +41,22 @@ Most editable content lives in `components/site-data.ts`.
 Before publishing, update:
 
 - `links.email` and `links.emailLabel`
-- `links.linkedin` and `links.linkedinLabel`
-- project links where `href: "#"` appears
-- writing links where `href: "#"` appears
-- any wording in the experience, project, writing, or resume summary arrays
+- any wording in the experience, project, writing, or education arrays
 
-Replace the resume PDF:
+Replace the resume and Circle research PDFs:
 
 - Put the final resume at `public/resume.pdf`
 - Keep the filename as `resume.pdf` unless you also update `links.resume`
+- Put the Circle report at `public/circle-research-report.pdf`
+
+## Reusable UI Components
+
+The project now includes `components/ui/`, which is the conventional location
+used by shadcn-compatible projects for reusable UI primitives. Keeping these
+components there makes them easy to import and avoids mixing presentational
+building blocks with page-specific sections. The project already uses Tailwind
+CSS and TypeScript; no shadcn setup is required unless you want to add shadcn
+components later.
 
 Replace the photo placeholder:
 

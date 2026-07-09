@@ -7,11 +7,12 @@ import { ProjectCard } from "@/components/ProjectCard";
 import { Section } from "@/components/Section";
 import { WritingCard } from "@/components/WritingCard";
 import {
+  aboutStats,
+  apCourses,
   experience,
   interests,
   links,
   projects,
-  resumeSummary,
   writing
 } from "@/components/site-data";
 import { Download, GraduationCap } from "lucide-react";
@@ -26,22 +27,24 @@ export default function Home() {
         <Section
           id="about"
           eyebrow="About"
-          title="A practical interest in how capital moves."
-          intro="I'm a student at Solon High School focused on finance, investing, and entrepreneurship. I co-founded Solon's first investing club, compete in varsity hockey and pole vault, and have explored venture capital through startup research and investment pitches. I'm especially interested in public markets, private investing, and how capital shapes growing businesses."
+          title="Interested in the work behind growing companies."
+          intro="I’m a high school student interested in finance, venture capital, entrepreneurship, and the way businesses grow from early ideas into lasting companies. I’m especially interested in early-stage B2B SaaS, Midwest venture ecosystems, and the metrics that drive strong companies, from ARR and retention to customer acquisition and market opportunity. I'm also an avid athlete and I'd love to connect with you."
         >
-          <div className="grid gap-8 lg:grid-cols-[1fr_0.75fr]">
-            <div className="rounded-lg border border-line bg-white p-6 shadow-sm">
-              <h3 className="flex items-center gap-2 text-xl font-semibold text-ink">
-                <GraduationCap aria-hidden="true" size={22} />
-                Current Focus
-              </h3>
-              <p className="mt-4 leading-7 text-slate-700">
-                I like work that connects research with real decisions:
-                understanding a business, studying the market around it, and
-                explaining why an opportunity matters. My background spans
-                investing club leadership, startup-style pitches, debate,
-                athletics, and customer-facing work.
-              </p>
+          <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr]">
+            <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
+              {aboutStats.map((stat) => (
+                <article
+                  key={stat.label}
+                  className="rounded-lg border border-line bg-white p-5 shadow-sm"
+                >
+                  <p className="font-serif text-4xl font-bold text-navy">
+                    {stat.value}
+                  </p>
+                  <p className="mt-1 text-sm font-semibold text-slate-700">
+                    {stat.label}
+                  </p>
+                </article>
+              ))}
             </div>
             <div>
               <h3 className="text-lg font-semibold text-ink">Interests</h3>
@@ -55,6 +58,41 @@ export default function Home() {
                   </span>
                 ))}
               </div>
+            </div>
+          </div>
+        </Section>
+
+        <Section
+          id="education"
+          eyebrow="Education"
+          title="Solon High School"
+          intro="Class of 2027"
+        >
+          <div className="grid gap-8 lg:grid-cols-[0.52fr_1fr]">
+            <article className="rounded-lg border border-line bg-white p-6 shadow-sm">
+              <h3 className="flex items-center gap-2 text-xl font-semibold text-ink">
+                <GraduationCap aria-hidden="true" size={22} />
+                Coursework
+              </h3>
+              <p className="mt-4 leading-7 text-slate-700">
+                Advanced Placement coursework across history, economics, math,
+                science, government, and language arts.
+              </p>
+            </article>
+            <div className="grid gap-3 sm:grid-cols-2">
+              {apCourses.map(({ course, score }) => (
+                <article
+                  key={course}
+                  className="flex items-center justify-between gap-4 rounded-lg border border-line bg-white px-5 py-4 shadow-sm"
+                >
+                  <h3 className="font-semibold text-ink">{course}</h3>
+                  {score ? (
+                    <span className="rounded-md bg-paper px-3 py-1 text-sm font-bold text-navy">
+                      {score}
+                    </span>
+                  ) : null}
+                </article>
+              ))}
             </div>
           </div>
         </Section>
@@ -74,8 +112,8 @@ export default function Home() {
         <Section
           id="projects"
           eyebrow="Projects"
-          title="Featured work and research."
-          intro="Selected projects that show how I approach markets, business models, communication, and applied research."
+          title="Things I&apos;ve been digging into."
+          intro="A few projects where I&apos;ve gotten to research a company, build an investment point of view, or make investing more accessible to other students."
         >
           <div className="grid gap-5 md:grid-cols-2">
             {projects.map((project) => (
@@ -85,12 +123,12 @@ export default function Home() {
         </Section>
 
         <Section
-          id="writing"
-          eyebrow="Writing"
-          title="Selected writing."
-          intro="A few placeholders for essays and research notes that can be published as the site grows."
+          id="research"
+          eyebrow="Writing & Research"
+          title="Questions worth sitting with."
+          intro="Two longer pieces on the systems that shape economic opportunity and everyday community. Contact me to request access."
         >
-          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-5 md:grid-cols-2">
             {writing.map((item) => (
               <WritingCard key={item.title} {...item} />
             ))}
@@ -100,42 +138,24 @@ export default function Home() {
         <Section
           id="resume"
           eyebrow="Resume"
-          title="Resume summary."
+          title="My resume."
           intro="A current resume is available below."
         >
-          <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr]">
-            <div className="rounded-lg border border-line bg-white p-6 shadow-sm">
-              <p className="leading-7 text-slate-700">
-                Download the current PDF version or scan the web summary for a
-                quick overview.
+          <div className="rounded-lg border border-line bg-white p-6 shadow-sm">
+            <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-center">
+              <p className="max-w-xl leading-7 text-slate-700">
+                A concise overview of my education, experience, leadership,
+                athletics, and current interests.
               </p>
               <a
                 href={links.resume}
-                className="mt-6 inline-flex items-center justify-center gap-2 rounded-md bg-navy px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#0D2742]"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex shrink-0 items-center justify-center gap-2 rounded-md bg-navy px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#0D2742]"
               >
                 <Download aria-hidden="true" size={18} />
                 Download Resume
               </a>
-            </div>
-            <div className="grid gap-4 md:grid-cols-2">
-              {Object.entries(resumeSummary).map(([category, items]) => (
-                <article
-                  key={category}
-                  className="rounded-lg border border-line bg-white p-5 shadow-sm"
-                >
-                  <h3 className="text-base font-semibold capitalize text-ink">
-                    {category}
-                  </h3>
-                  <ul className="mt-4 space-y-2 text-sm leading-6 text-slate-700">
-                    {items.map((item) => (
-                      <li key={item} className="flex gap-3">
-                        <span className="mt-2 size-1.5 shrink-0 rounded-full bg-steel" />
-                        <span>{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </article>
-              ))}
             </div>
           </div>
         </Section>

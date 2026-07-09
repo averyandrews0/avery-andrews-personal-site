@@ -1,21 +1,42 @@
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
-// Replace these placeholder links with Avery's final public links before publishing.
 export const links = {
   resume: `${basePath}/resume.pdf`,
+  circleResearch: `${basePath}/circle-research-report.pdf`,
   email: "mailto:your.email@example.com",
   emailLabel: "your.email@example.com",
-  linkedin: "https://www.linkedin.com/in/your-linkedin/",
+  linkedin: "https://www.linkedin.com/in/avery-andrews-a7a453329/",
   linkedinLabel: "LinkedIn"
 };
 
 export const navItems = [
   { label: "About", href: "#about" },
+  { label: "Education", href: "#education" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
-  { label: "Writing", href: "#writing" },
+  { label: "Research", href: "#research" },
   { label: "Resume", href: "#resume" },
   { label: "Contact", href: "#contact" }
+];
+
+export const aboutStats = [
+  { value: "2x", label: "National qualifier" },
+  { value: "1", label: "Paper published" },
+  { value: "30+", label: "People taught investing" }
+];
+
+export const apCourses = [
+  { course: "AP World History", score: "5" },
+  { course: "AP U.S. History", score: "5" },
+  { course: "AP Biology", score: "5" },
+  { course: "AP Macroeconomics", score: "5" },
+  { course: "AP Microeconomics", score: "5" },
+  { course: "AP Calculus BC", score: "5" },
+  { course: "AP Statistics", score: "5" },
+  { course: "AP U.S. Government", score: "5" },
+  { course: "AP English Language", score: "5" },
+  { course: "AP Environmental Science", score: "5" },
+  { course: "AP Seminar" }
 ];
 
 export const interests = [
@@ -77,98 +98,34 @@ export const projects = [
   {
     title: "Circle Startup Investment Pitch",
     description:
-      "Created a venture-style investment pitch analyzing Circle's embedded finance model, market opportunity, competitive positioning, and growth potential.",
+      "A closer look at Circle (NYSE: CRCL): how the USDC business earns money, where growth could come from, and the questions around rates, distribution costs, and competition.",
     skills: ["Market research", "Startup evaluation", "Competitive analysis"],
-    // Replace with the final project URL, deck, or PDF when ready.
-    href: "#"
+    href: links.circleResearch,
+    linkLabel: "Open research report"
   },
   {
     title: "Solon Investment Society Materials",
     description:
-      "Developed materials and discussion topics for a student investing club focused on stock analysis, market structure, and financial literacy.",
+      "Materials, prompts, and conversations built to make investing more approachable for Solon students, from stock ideas and market structure to careers in finance.",
     skills: ["Investing", "Education", "Leadership"],
-    // Replace with a folder, Notion page, or selected materials link when ready.
-    href: "#"
-  },
-  {
-    title: "Apple Spice Outreach Campaign",
-    description:
-      "Designed and executed a business outreach campaign to identify potential customers and communicate Apple Spice's catering value proposition.",
-    skills: ["Marketing", "Sales outreach", "Communication"],
-    // Replace with a sanitized case study link if you want this public.
-    href: "#"
-  },
-  {
-    title: "Selected Writing and Research",
-    description:
-      "Research and writing on finance, work-life imbalance, urban design, third places, economics, and public policy.",
-    skills: ["Research", "Writing", "Analysis"],
-    // Replace with a writing portfolio link when ready.
-    href: "#"
+    href: "https://soloninvestmentsociety.org",
+    linkLabel: "Visit the society"
   }
 ];
 
 export const writing = [
   {
-    title: "Finance and Work-Life Imbalance",
+    title: "The Impacts of Government Regulation on Economic Health",
     summary:
-      "A short essay placeholder for thinking about demanding finance careers, incentives, and sustainable ambition.",
-    // Replace with the final article URL or local route.
-    href: "#"
+      "A published economics paper that weighs the trade-offs in environmental, health, and financial regulation, with a focus on where policy can protect people without closing off innovation.",
+    href: links.email,
+    linkLabel: "Request access"
   },
   {
-    title: "Third Places and Loneliness",
+    title: "Rebuilding Social Infrastructure in the United States",
     summary:
-      "A placeholder for writing on the role of libraries, cafes, parks, and shared civic spaces in everyday life.",
-    // Replace with the final article URL or local route.
-    href: "#"
-  },
-  {
-    title: "Urban Design and Walkability",
-    summary:
-      "A placeholder for research on walkable neighborhoods, local development, and how design shapes behavior.",
-    // Replace with the final article URL or local route.
-    href: "#"
-  },
-  {
-    title: "Market Commentary",
-    summary:
-      "A placeholder for selected notes on public markets, business models, and current investment themes.",
-    // Replace with the final article URL or local route.
-    href: "#"
+      "An AP Seminar paper on third places, loneliness, and social infrastructure. It argues for accessible community spaces through local investment, walkable design, and zoning reform.",
+    href: links.email,
+    linkLabel: "Request access"
   }
 ];
-
-export const resumeSummary = {
-  education: [
-    "Solon High School, Class of 2027",
-    "3.9 unweighted GPA / 4.405 weighted GPA",
-    "35 ACT earned twice, with a 36 superscore",
-    "5s on AP World History, AP United States History, AP Biology, AP Microeconomics, and AP Macroeconomics"
-  ],
-  experience: [
-    "Apple Spice Catering: marketing outreach, delivery, and prospect research",
-    "Lao Sze Chuan: serving and hosting, including customer service and Mandarin language support",
-    "Case Western Reserve University Essay Contest: 2nd place, with published economics writing"
-  ],
-  leadership: [
-    "Co-Founder and President, Solon Investment Society",
-    "Helped organize guest speakers from Ernst & Young, Kaulig Capital, and JumpStart Ventures",
-    "Directed students in the Wharton Global High School Investment Competition",
-    "Future Business Leaders of America: 2026 Ohio State Leadership Conference finalist and national qualifier"
-  ],
-  athletics: [
-    "Solon High School varsity hockey",
-    "Pole vault, OHSAA Division I",
-    "13'0 pole vault PR and 2026 conference meet placement"
-  ],
-  skills: [
-    "Market research",
-    "Investment analysis",
-    "Sales outreach",
-    "Public speaking",
-    "Research writing",
-    "Team leadership",
-    "Customer communication"
-  ]
-};

@@ -1,5 +1,7 @@
 import { ArrowRight, BriefcaseBusiness, FileText, Mail } from "lucide-react";
 import { links } from "./site-data";
+import AetherFlowHero from "./ui/aether-flow-hero";
+import BlurTextAnimation from "./ui/blur-text-animation";
 
 const highlights = [
   "Solon High School, Class of 2027",
@@ -11,9 +13,10 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="border-b border-line bg-white pt-16 sm:pt-20 lg:pt-24"
+      className="relative overflow-hidden border-b border-line bg-white pt-16 sm:pt-20 lg:pt-24"
     >
-      <div className="mx-auto grid max-w-6xl gap-10 px-5 pb-16 sm:px-6 sm:pb-20 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-8">
+      <AetherFlowHero className="opacity-70" />
+      <div className="relative mx-auto grid max-w-6xl gap-10 px-5 pb-16 sm:px-6 sm:pb-20 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:px-8">
         <div>
           <p className="text-sm font-semibold uppercase tracking-[0.16em] text-moss">
             Student investor | Builder | Athlete
@@ -21,11 +24,14 @@ export function Hero() {
           <h1 className="mt-5 max-w-4xl font-serif text-5xl font-bold leading-[1.05] text-ink sm:text-6xl lg:text-7xl">
             Avery Andrews
           </h1>
-          <p className="mt-6 max-w-3xl text-xl leading-8 text-slate-800">
-            Finance-focused student interested in public markets, private
-            equity, growth equity, venture capital, entrepreneurship, and urban
-            development.
-          </p>
+          <BlurTextAnimation
+            text="Finance-focused student interested in public markets, private equity, growth equity, venture capital, entrepreneurship, and urban development."
+            className="mt-6 max-w-3xl"
+            fontSize="text-xl"
+            fontFamily="font-sans"
+            textColor="text-slate-800"
+            repeat={false}
+          />
           <p className="mt-4 text-base font-medium text-slate-600">
             Solon High School | Solon Investment Society Co-Founder
           </p>
@@ -33,6 +39,8 @@ export function Hero() {
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <a
               href={links.resume}
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-md bg-navy px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#0D2742]"
             >
               <FileText aria-hidden="true" size={18} />
