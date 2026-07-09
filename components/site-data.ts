@@ -2,9 +2,10 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export const links = {
   resume: `${basePath}/resume.pdf`,
-  circleResearch: `${basePath}/circle-research-report.pdf`,
-  email: "mailto:your.email@example.com",
-  emailLabel: "your.email@example.com",
+  email: "mailto:avery.mz.a@gmail.com",
+  emailLabel: "avery.mz.a@gmail.com",
+  writingAccess:
+    "mailto:avery.mz.a@gmail.com?subject=Request%20for%20writing%20access",
   linkedin: "https://www.linkedin.com/in/avery-andrews-a7a453329/",
   linkedinLabel: "LinkedIn"
 };
@@ -12,7 +13,6 @@ export const links = {
 export const navItems = [
   { label: "About", href: "#about" },
   { label: "Education", href: "#education" },
-  { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Research", href: "#research" },
   { label: "Resume", href: "#resume" },
@@ -36,72 +36,18 @@ export const apCourses = [
   { course: "AP U.S. Government", score: "5" },
   { course: "AP English Language", score: "5" },
   { course: "AP Environmental Science", score: "5" },
-  { course: "AP Seminar" }
-];
-
-export const interests = [
-  "Public markets",
-  "Private equity",
-  "Growth equity",
-  "Venture capital",
-  "Entrepreneurship",
-  "Urban development and walkability",
-  "Economics",
-  "Track & Field",
-  "Ice Hockey"
-];
-
-export const experience = [
-  {
-    title: "Co-Founder, Solon Investing Club",
-    eyebrow: "Solon Investment Society",
-    description:
-      "Helped launch Solon's first student investing club, focused on market education, stock analysis, and discussion of finance careers.",
-    details: [
-      "Co-founded and helped lead the first official investing club at Solon High School.",
-      "Supported weekly lessons, interactive activities, guest speakers, and student teams in the Wharton Global High School Investment Competition."
-    ]
-  },
-  {
-    title: "Marketing Outreach, Apple Spice Catering",
-    eyebrow: "Apple Spice Box Lunch Delivery & Catering Co.",
-    description:
-      "Built an independent outreach campaign to identify and contact potential business customers, developing communication, sales, and marketing skills.",
-    details: [
-      "Researched office decision-makers for corporate catering outreach.",
-      "Built an initial prospect database of roughly 620 verified email contacts and 700 office addresses."
-    ]
-  },
-  {
-    title: "Varsity Athlete, Hockey and Pole Vault",
-    eyebrow: "Solon High School Athletics",
-    description:
-      "Compete in team and individual sports requiring discipline, consistency, leadership, and performance under pressure.",
-    details: [
-      "Compete on Solon High School's varsity hockey team.",
-      "Pole vault PR of 13'0, with conference and invitational placements."
-    ]
-  },
-  {
-    title: "Public Forum Debate",
-    eyebrow: "OSDA & NSDA",
-    description:
-      "Develop research, argumentation, public speaking, and evidence-based communication skills through competitive debate.",
-    details: [
-      "Qualified to the 2026 Ohio State Tournament.",
-      "Finalist at the 2025 Last Chance National Qualifier."
-    ]
-  }
+  { course: "AP Seminar", score: "5" }
 ];
 
 export const projects = [
   {
-    title: "Circle Startup Investment Pitch",
+    title: "Cleveland Clinic PTO & Attendance Tracking",
     description:
-      "A closer look at Circle (NYSE: CRCL): how the USDC business earns money, where growth could come from, and the questions around rates, distribution costs, and competition.",
-    skills: ["Market research", "Startup evaluation", "Competitive analysis"],
-    href: links.circleResearch,
-    linkLabel: "Open research report"
+      "Used AI tools and Excel to simplify attendance and PTO work for a Cleveland Clinic team. The live section-level tracker made approvals clearer, helped prevent understaffing, and became a workflow I could teach back to my mentors.",
+    skills: ["AI workflows", "Excel automation", "Operations"],
+    href: "#contact",
+    linkLabel: "Ask about the project",
+    newTab: false
   },
   {
     title: "Solon Investment Society Materials",
@@ -110,22 +56,38 @@ export const projects = [
     skills: ["Investing", "Education", "Leadership"],
     href: "https://soloninvestmentsociety.org",
     linkLabel: "Visit the society"
+  },
+  {
+    title: "Apple Spice Outreach Campaign",
+    description:
+      "A hands-on B2B outreach project for Apple Spice Catering: researching local prospects with AI tools, organizing useful contact data, and turning it into a more focused way to start conversations with potential clients.",
+    skills: ["Research", "Sales outreach", "Communication"],
+    href: "#contact",
+    linkLabel: "Ask about the work",
+    newTab: false
   }
 ];
 
 export const writing = [
   {
+    title: "Circle Internet Group Research Report",
+    summary:
+      "A public-markets report on Circle, USDC, and the opportunities and risks inside the stablecoin business model.",
+    href: links.writingAccess,
+    linkLabel: "Request access"
+  },
+  {
     title: "The Impacts of Government Regulation on Economic Health",
     summary:
-      "A published economics paper that weighs the trade-offs in environmental, health, and financial regulation, with a focus on where policy can protect people without closing off innovation.",
-    href: links.email,
+      "A published economics paper on the balance between innovation, consumer protection, and public welfare across major industries.",
+    href: links.writingAccess,
     linkLabel: "Request access"
   },
   {
     title: "Rebuilding Social Infrastructure in the United States",
     summary:
-      "An AP Seminar paper on third places, loneliness, and social infrastructure. It argues for accessible community spaces through local investment, walkable design, and zoning reform.",
-    href: links.email,
+      "An AP Seminar paper on third places, loneliness, and how walkable communities can create stronger everyday connections.",
+    href: links.writingAccess,
     linkLabel: "Request access"
   }
 ];

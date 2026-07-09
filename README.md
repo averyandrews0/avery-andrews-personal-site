@@ -40,14 +40,12 @@ Most editable content lives in `components/site-data.ts`.
 
 Before publishing, update:
 
-- `links.email` and `links.emailLabel`
 - any wording in the experience, project, writing, or education arrays
 
-Replace the resume and Circle research PDFs:
+Replace the resume PDF:
 
 - Put the final resume at `public/resume.pdf`
 - Keep the filename as `resume.pdf` unless you also update `links.resume`
-- Put the Circle report at `public/circle-research-report.pdf`
 
 ## Reusable UI Components
 

@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 html {
@@ -12,16 +12,16 @@ html {
 
 body {
   min-height: 100vh;
-  background: #f7fafc;
-  color: #162033;
+  background: #0c0d10;
+  color: #f7f8fa;
   text-rendering: optimizeLegibility;
 }
 
 ::selection {
-  background: rgba(18, 53, 91, 0.18);
+  background: rgba(197, 170, 255, 0.42);
 }
 
 :focus-visible {
-  outline: 3px solid rgba(18, 53, 91, 0.38);
+  outline: 3px solid rgba(197, 170, 255, 0.7);
   outline-offset: 3px;
 }

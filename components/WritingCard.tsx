@@ -14,12 +14,12 @@ export function WritingCard({
   linkLabel
 }: WritingCardProps) {
   return (
-    <article className="rounded-lg border border-line bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-card">
+    <article className="rounded-lg border border-white/10 bg-white/[0.03] p-6 transition hover:-translate-y-0.5 hover:border-lilac/35 hover:bg-white/[0.05]">
       <h3 className="text-lg font-semibold text-ink">{title}</h3>
-      <p className="mt-3 leading-7 text-slate-700">{summary}</p>
+      <p className="mt-3 leading-7 text-slate-300">{summary}</p>
       <a
         href={href}
-        className="mt-5 inline-flex items-center gap-2 rounded-md text-sm font-semibold text-navy hover:text-[#0D2742]"
+        className="mt-6 inline-flex items-center gap-2 rounded-md text-sm font-semibold text-lilac hover:text-white"
       >
         {linkLabel}
         <ArrowUpRight aria-hidden="true" size={16} />

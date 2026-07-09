@@ -8,15 +8,18 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#162033",
-        navy: "#12355B",
-        steel: "#4B6F8F",
-        line: "#D8E1EA",
-        paper: "#F7FAFC",
-        moss: "#58735E"
+        ink: "#F7F8FA",
+        navy: "#89A7FF",
+        steel: "#7F8EAC",
+        line: "#2A2D35",
+        paper: "#14161C",
+        moss: "#C5AAFF",
+        void: "#0C0D10",
+        lilac: "#C5AAFF",
+        mint: "#7EE0C5"
       },
       boxShadow: {
-        card: "0 14px 35px rgba(22, 32, 51, 0.08)"
+        card: "0 18px 42px rgba(0, 0, 0, 0.24)"
       }
     }
   },

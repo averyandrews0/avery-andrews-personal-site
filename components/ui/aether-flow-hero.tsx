@@ -74,7 +74,7 @@ const AetherFlowHero = ({ className }: AetherFlowHeroProps) => {
 
         context.beginPath();
         context.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-        context.fillStyle = "rgba(18, 53, 91, 0.26)";
+        context.fillStyle = "rgba(197, 170, 255, 0.78)";
         context.fill();
       }
 
@@ -88,7 +88,7 @@ const AetherFlowHero = ({ className }: AetherFlowHeroProps) => {
             context.beginPath();
             context.moveTo(particles[a].x, particles[a].y);
             context.lineTo(particles[b].x, particles[b].y);
-            context.strokeStyle = `rgba(75, 111, 143, ${0.12 * (1 - distance / 118)})`;
+            context.strokeStyle = `rgba(126, 224, 197, ${0.28 * (1 - distance / 118)})`;
             context.lineWidth = 1;
             context.stroke();
           }
