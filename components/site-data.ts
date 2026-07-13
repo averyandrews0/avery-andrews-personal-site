@@ -1,7 +1,7 @@
 const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export const links = {
-  resume: `$/resume.pdf`,
+  resume: `/resume.pdf`,
   email: "mailto:avery.mz.a@gmail.com",
   emailLabel: "avery.mz.a@gmail.com",
   writingAccess:
