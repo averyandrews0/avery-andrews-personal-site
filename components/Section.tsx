@@ -14,7 +14,7 @@ export function Section({ id, eyebrow, title, intro, children }: SectionProps) {
       <div className="mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           {eyebrow ? (
-            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-mint">
+            <p className="text-sm font-semibold uppercase tracking-[0.16em] text-lilac">
               {eyebrow}
             </p>
           ) : null}
@@ -22,7 +22,7 @@ export function Section({ id, eyebrow, title, intro, children }: SectionProps) {
             {title}
           </h2>
           {intro ? (
-            <p className="mt-5 text-base leading-7 text-slate-300 sm:text-lg">
+            <p className="mt-5 text-base leading-7 text-steel sm:text-lg">
               {intro}
             </p>
           ) : null}

@@ -4,6 +4,32 @@
 
 :root {
   color-scheme: dark;
+  --void: 12 13 16;
+  --paper: 20 22 28;
+  --segment: 42 45 53;
+  --contact: 24 19 33;
+  --ink: 247 248 250;
+  --steel: 203 213 225;
+  --line: 42 45 53;
+  --lilac: 197 170 255;
+  --navy: 137 167 255;
+}
+
+.light {
+  color-scheme: light;
+  --void: 248 247 251;
+  --paper: 255 255 255;
+  --segment: 239 235 247;
+  --contact: 241 237 248;
+  --ink: 29 25 38;
+  --steel: 92 84 107;
+  --line: 220 214 230;
+  --lilac: 112 76 188;
+  --navy: 79 95 168;
+}
+
+.dark {
+  color-scheme: dark;
 }
 
 html {
@@ -12,9 +38,10 @@ html {
 
 body {
   min-height: 100vh;
-  background: #0c0d10;
-  color: #f7f8fa;
+  background: rgb(var(--void));
+  color: rgb(var(--ink));
   text-rendering: optimizeLegibility;
+  transition: background-color 180ms ease, color 180ms ease;
 }
 
 ::selection {

@@ -7,7 +7,7 @@ export function Hero() {
   return (
     <section
       id="home"
-      className="relative flex min-h-[calc(100svh-73px)] items-center overflow-hidden border-b border-white/10 bg-void py-20 sm:py-24"
+      className="relative flex min-h-[calc(100svh-73px)] items-center overflow-hidden border-b border-line bg-void py-20 sm:py-24"
     >
       <AetherFlowHero className="opacity-100" />
       <div className="relative mx-auto w-full max-w-6xl px-5 sm:px-6 lg:px-8">
@@ -15,7 +15,7 @@ export function Hero() {
           <p className="inline-flex rounded-full border border-lilac/25 bg-lilac/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-lilac">
             Student investor | Builder | Athlete
           </p>
-          <h1 className="mt-7 max-w-4xl font-serif text-5xl font-bold leading-[1.02] text-white sm:text-7xl lg:text-8xl">
+          <h1 className="mt-7 max-w-4xl font-serif text-5xl font-bold leading-[1.02] text-ink sm:text-7xl lg:text-8xl">
             Avery Andrews
           </h1>
           <BlurTextAnimation
@@ -23,7 +23,7 @@ export function Hero() {
             className="mt-7 max-w-3xl"
             fontSize="text-xl sm:text-2xl"
             fontFamily="font-sans"
-            textColor="text-slate-100"
+            textColor="text-ink"
             repeat={false}
           />
 
@@ -32,21 +32,21 @@ export function Hero() {
               href={links.resume}
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-md bg-lilac px-5 py-3 text-sm font-semibold text-void transition hover:bg-[#d2c2ff]"
+              className="inline-flex items-center justify-center gap-2 rounded-md bg-lilac px-5 py-3 text-sm font-semibold text-void transition hover:brightness-110"
             >
               <FileText aria-hidden="true" size={18} />
               View Resume
             </a>
             <a
               href="#contact"
-              className="inline-flex items-center justify-center gap-2 rounded-md border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+              className="inline-flex items-center justify-center gap-2 rounded-md border border-line bg-paper/70 px-5 py-3 text-sm font-semibold text-ink transition hover:bg-segment"
             >
               <Mail aria-hidden="true" size={18} />
               Contact
             </a>
             <a
               href="#projects"
-              className="inline-flex items-center justify-center gap-2 rounded-md border border-white/15 bg-white/5 px-5 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
+              className="inline-flex items-center justify-center gap-2 rounded-md border border-line bg-paper/70 px-5 py-3 text-sm font-semibold text-ink transition hover:bg-segment"
             >
               <BriefcaseBusiness aria-hidden="true" size={18} />
               View Projects

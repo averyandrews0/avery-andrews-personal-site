@@ -40,7 +40,7 @@ Most editable content lives in `components/site-data.ts`.
 
 Before publishing, update:
 
-- any wording in the experience, project, writing, or education arrays
+- any wording in the project, writing, or education arrays
 
 Replace the resume PDF:
 
@@ -56,11 +56,6 @@ building blocks with page-specific sections. The project already uses Tailwind
 CSS and TypeScript; no shadcn setup is required unless you want to add shadcn
 components later.
 
-Replace the photo placeholder:
-
-- Add a professional headshot to `public/`
-- Update `components/Hero.tsx` to render the image instead of the initials placeholder
-
 ## GitHub Pages Deployment
 
 This repo includes `.github/workflows/deploy.yml`.
@@ -72,10 +67,10 @@ To publish:
 3. Set **Build and deployment** to **GitHub Actions**.
 4. Run the `Deploy to GitHub Pages` workflow, or push another commit to `main`.
 
-The workflow automatically handles the base path for normal project repos like `username/repo-name`. If you use a user site repo such as `username.github.io`, it builds without a base path.
+The site is configured for the custom domain `averyandrews.org`, so public assets use root-level paths such as `/resume.pdf`.
 
 ## Notes
 
-- The contact links are placeholders by request.
+- The theme control defaults to dark mode and remembers each visitor's light or dark preference.
 - The site uses semantic sections and anchor navigation with smooth scrolling.
 - Heavy animations are intentionally avoided for a more professional feel.

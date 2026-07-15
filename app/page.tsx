@@ -12,7 +12,7 @@ import {
   projects,
   writing
 } from "@/components/site-data";
-import { Download, GraduationCap } from "lucide-react";
+import { Download } from "lucide-react";
 
 export default function Home() {
   return (
@@ -31,12 +31,12 @@ export default function Home() {
             {aboutStats.map((stat) => (
               <article
                 key={stat.label}
-                className="rounded-lg border border-white/10 bg-white/[0.03] px-5 py-6"
+                className="rounded-lg border border-line bg-paper px-5 py-6"
               >
                 <p className="font-serif text-4xl font-bold text-lilac">
                   {stat.value}
                 </p>
-                <p className="mt-1 text-sm font-semibold text-slate-300">
+                <p className="mt-1 text-sm font-semibold text-steel">
                   {stat.label}
                 </p>
               </article>
@@ -50,32 +50,20 @@ export default function Home() {
           title="Solon High School"
           intro="Class of 2027"
         >
-          <div className="grid gap-8 lg:grid-cols-[0.52fr_1fr]">
-            <article className="rounded-lg border border-white/10 bg-white/[0.03] p-6">
-              <h3 className="flex items-center gap-2 text-xl font-semibold text-ink">
-                <GraduationCap aria-hidden="true" size={22} />
-                Coursework
-              </h3>
-              <p className="mt-4 leading-7 text-slate-300">
-                Advanced Placement coursework across history, economics, math,
-                science, government, and language arts.
-              </p>
-            </article>
-            <div className="grid gap-3 sm:grid-cols-2">
-              {apCourses.map(({ course, score }) => (
-                <article
-                  key={course}
-                  className="flex items-center justify-between gap-4 rounded-lg border border-white/10 bg-white/[0.03] px-5 py-4"
-                >
-                  <h3 className="font-semibold text-ink">{course}</h3>
-                  {score ? (
-                    <span className="rounded-md bg-white/10 px-3 py-1 text-sm font-bold text-lilac">
-                      {score}
-                    </span>
-                  ) : null}
-                </article>
-              ))}
-            </div>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+            {apCourses.map(({ course, score }) => (
+              <article
+                key={course}
+                className="flex items-center justify-between gap-4 rounded-lg border border-line bg-paper px-5 py-4"
+              >
+                <h3 className="font-semibold text-ink">{course}</h3>
+                {score ? (
+                  <span className="rounded-md bg-segment px-3 py-1 text-sm font-bold text-lilac">
+                    {score}
+                  </span>
+                ) : null}
+              </article>
+            ))}
           </div>
         </Section>
 
@@ -111,9 +99,9 @@ export default function Home() {
           title="My resume."
           intro="A current resume is available below."
         >
-          <div className="rounded-lg border border-white/10 bg-white/[0.03] p-6">
+          <div className="rounded-lg border border-line bg-paper p-6">
             <div className="flex flex-col justify-between gap-5 sm:flex-row sm:items-center">
-              <p className="max-w-xl leading-7 text-slate-300">
+              <p className="max-w-xl leading-7 text-steel">
                 A concise overview of my education, experience, leadership,
                 athletics, and current interests.
               </p>
@@ -121,7 +109,7 @@ export default function Home() {
                 href={links.resume}
                 target="_blank"
                 rel="noreferrer"
-                className="inline-flex shrink-0 items-center justify-center gap-2 rounded-md bg-lilac px-5 py-3 text-sm font-semibold text-void transition hover:bg-[#d2c2ff]"
+                className="inline-flex shrink-0 items-center justify-center gap-2 rounded-md bg-lilac px-5 py-3 text-sm font-semibold text-void transition hover:brightness-110"
               >
                 <Download aria-hidden="true" size={18} />
                 Download Resume

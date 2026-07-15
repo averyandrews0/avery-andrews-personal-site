@@ -1,7 +1,5 @@
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
-
 export const links = {
-  resume: `/resume.pdf`,
+  resume: "/resume.pdf",
   email: "mailto:avery.mz.a@gmail.com",
   emailLabel: "avery.mz.a@gmail.com",
   writingAccess:
@@ -22,7 +20,7 @@ export const navItems = [
 export const aboutStats = [
   { value: "2x", label: "National qualifier" },
   { value: "1", label: "Paper published" },
-  { value: "30+", label: "People taught investing" }
+  { value: "156+", label: "People taught investing" }
 ];
 
 export const apCourses = [
